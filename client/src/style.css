@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    height: 100%;
+    /* width:100%; */
+    /* padding: 0 100px; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Students--main, .Electives--main{
+    margin-top: 30px;
+    padding: 0 100px; 
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 10px;
+    row-gap: 1em;
+  }
+
+  .addstud, .addElec{
+    padding: 15px 50px;
+    border-radius: 10px ;
+    border: none;
+    margin: 5px;
+    background-color: #007bff;
+  }
+
+  .addstud a, .addElec a{
+    color: white;
+    font-size: 20px;
+  }
+
+
+  /*Electives  */
+.electives{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+}
+
+.elective{
+    background-color: aquamarine;
+    border: 5px;
+    border-color: #000000;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    width:250px;
+    height:250px;
+    margin:10px;
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    padding: 10px 10px;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Roboto';
+}
+
+
+
+/* Students */
+.students{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.student{
+    background-color: #F8EAD8;
+    border: 5px;
+    border-color: #000000;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    width:250px;
+    height:250px;
+    margin:10px;
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    padding: 10px 10px;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.selectedElectives, .selectedStudents{
+  margin-top: 20px;
+}
+
+.heading{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Elective List Styling */
+.electivesList, .studentsList{
+    display: flex;
+    gap: 20px;
+}
+
+.elective-list, .student-list{
+    background-color: aquamarine;
+    border: 5px;
+    border-color: #000000;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    width:250px;
+    height:250px;
+    margin:10px;
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    padding: 20px 10px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.se-list{
+    background-color: rgb(230, 187, 18);
+    border: 5px;
+    border-color: #000000;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    width:250px;
+    height:250px;
+    margin:10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    margin-right: auto ;
+    margin-left: auto;
+    margin-top: 50px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form button:hover {
+    background-color: #0056b3;
+  }
+
+.btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+button a{
+    color: black;
+    text-decoration: none;
+}
+
+
+button {
+    padding: 5px 20px;
+    border-radius: 10px ;
+    border: none;
+    margin: 5px;
+  }
