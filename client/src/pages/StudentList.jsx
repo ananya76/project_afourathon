@@ -6,7 +6,8 @@ import Header from './components/Header';
 const StudentList = () => {
   const [students, setStudents] = useState([]);
   const [selectedStudents, setSelectedStudents]  = useState([]);
- 
+  const [eName, setEName]  = useState([]);
+
   const location = useLocation();
   const electiveId =  location.pathname.split("/")[2];
 
@@ -26,6 +27,19 @@ const StudentList = () => {
   }, []);
 
   console.log(electiveId)
+
+  useEffect(() => {
+    const fetchElective = async () => {
+      try {
+        const response = await axios.get('http://localhost:8800/electives/'+ electiveId);
+        setEName(response.data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchElective();
+  }, []);
 
     // Fetch selected electives from the server(selctiions table)
     useEffect(() => {
@@ -91,6 +105,7 @@ const StudentList = () => {
     <div>
       <Header name = "Electives" link = "/Electives" />
     <div className='heading'>
+      {eName.map((en)=>(<h1>{en.s_name}</h1>))}
         <h2>Selected Students</h2>
         <div className="selectedStudents">
           <div className="wrapper">
